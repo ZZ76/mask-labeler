@@ -6,8 +6,8 @@ python labeler.py img</br>
 
 ### Shortcuts
 1~5: select brush size</br>
-n: next</br>
-p: previous</br>
+[: previous</br>
+]: next</br>
 s: save</br>
 esc: exit</br>
 
