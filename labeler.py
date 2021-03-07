@@ -29,12 +29,13 @@ def add_grids(img):
 
 def add_mask(img):
     global MOUSE_MASK, MASK
-    if SHOW_MASK:
+    if SHOW_MASK:  # show mask on green channel
         if HIGH_CONTRAST:
             img[:,:,1] = cv2.addWeighted(ori_img[:,:,1], 0.8, MASK, 0.9, 0)
         else:
             img[:,:,1] = cv2.addWeighted(ori_img[:,:,1], 1, MASK, 0.2, 0)
-    img[:,:,2] = cv2.addWeighted(ori_img[:,:,2], 1, MOUSE_MASK, 0.5, 0)
+    img[:,:,0] = cv2.addWeighted(ori_img[:,:,0], 1, MOUSE_MASK, 0.6, 0)
+    img[:,:,2] = cv2.addWeighted(ori_img[:,:,2], 1, MOUSE_MASK, 0.6, 0)
     return img
 
 
@@ -144,10 +145,10 @@ def labeller(img):
             save_mat()
         elif k == ord('g'):
             SHOW_GRID = not(SHOW_GRID)
-        elif k == ord('n'):
+        elif k == ord(']'):
             NEXT = 1
             break
-        elif k == ord('p'):
+        elif k == ord('['):
             NEXT = 2
             break 
         elif k == ord('x'):
@@ -155,8 +156,6 @@ def labeller(img):
         elif k == ord('r'):
             SHOW_MASK = not(SHOW_MASK)
             print('SHOW_MASK:', SHOW_MASK)
-        elif k == ord('['):
-            pass
         elif k == ord('1'):
             BRUSH_SIZE = 1
             update_mouse_mask()
@@ -171,6 +170,9 @@ def labeller(img):
             update_mouse_mask()
         elif k == ord('5'):
             BRUSH_SIZE = 9 
+            update_mouse_mask()
+        elif k == ord('6'):
+            BRUSH_SIZE = 11
             update_mouse_mask()
     cv2.destroyAllWindows()
     
@@ -211,7 +213,7 @@ MODE = 0
 HIGH_CONTRAST = False
 SHOW_MASK = True
 SHOW_GRID = False
-SIDE = 600
+SIDE = 800
 d = 112
 INTERVAL = SIDE/d
 BRUSH_LIST = [1, 3, 5]
@@ -226,6 +228,8 @@ IMG_ITER = iter(sorted(os.listdir(IMG_DIR)))
 OUTPUT_PATH = './data-cnn/label'
 IMG_LIST = list(IMG_ITER)
 IDX = 0
+## NEXT
+# 0: exit, 1: next, 2: previous
 NEXT = True
 
 if __name__ == '__main__':
