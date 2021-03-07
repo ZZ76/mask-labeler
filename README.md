@@ -5,7 +5,7 @@ python labeler.py img</br>
 --optional img indicates which file to start in the list. Otherwise start from the first one.</br>
 
 ### Shortcuts
-1~5: select brush size</br>
+1~6: select brush size</br>
 [: previous</br>
 ]: next</br>
 s: save</br>
