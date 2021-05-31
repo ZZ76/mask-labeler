@@ -1,18 +1,17 @@
 # mask-labeler
 
 ### Usage
-python labeler.py img</br>
---optional img indicates which file to start in the list. Otherwise start from the first one.</br>
+python main.py img</br>
+select label and image directory
 
 ### Shortcuts
-1~6: select brush size</br>
+1~8: select brush size</br>
 [: previous</br>
 ]: next</br>
-s: save</br>
-esc: exit</br>
+Ctrl+s: save</br>
 
 b: brush</br>
-e: erase</br>
-g: show/hide grids</br>
+e: eraser</br>
 r: show/hide mask</br>
-x: high contrast on green channel</br>
+x: highlight mask</br>
+c: highlight mouse cursor</br>
