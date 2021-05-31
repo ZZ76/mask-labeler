@@ -267,6 +267,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_save = QPushButton(self.widget_right)
         self.pushButton_save.setObjectName(u"pushButton_save")
+        self.pushButton_save.setCheckable(False)
 
         self.verticalLayout_2.addWidget(self.pushButton_save)
 
@@ -304,8 +305,17 @@ class Ui_MainWindow(object):
         self.pushButton_eraser.setShortcut(QCoreApplication.translate("MainWindow", u"E", None))
 #endif // QT_CONFIG(shortcut)
         self.checkBox_highlight_mouse.setText(QCoreApplication.translate("MainWindow", u"HL Mouse", None))
+#if QT_CONFIG(shortcut)
+        self.checkBox_highlight_mouse.setShortcut(QCoreApplication.translate("MainWindow", u"C", None))
+#endif // QT_CONFIG(shortcut)
         self.checkBox_highlight_mask.setText(QCoreApplication.translate("MainWindow", u"HL Mask", None))
+#if QT_CONFIG(shortcut)
+        self.checkBox_highlight_mask.setShortcut(QCoreApplication.translate("MainWindow", u"X", None))
+#endif // QT_CONFIG(shortcut)
         self.checkBox_showmask.setText(QCoreApplication.translate("MainWindow", u"ShowMask", None))
+#if QT_CONFIG(shortcut)
+        self.checkBox_showmask.setShortcut(QCoreApplication.translate("MainWindow", u"R", None))
+#endif // QT_CONFIG(shortcut)
         self.label_filename.setText("")
         self.label_image.setText(QCoreApplication.translate("MainWindow", u"\u1555( \u141b )\u1557", None))
         self.pushButton_brush_1.setText(QCoreApplication.translate("MainWindow", u"1", None))
@@ -344,7 +354,16 @@ class Ui_MainWindow(object):
         self.label_label_dir.setText("")
         self.pushButton_images.setText(QCoreApplication.translate("MainWindow", u"Images", None))
         self.pushButton_back.setText(QCoreApplication.translate("MainWindow", u"Back", None))
+#if QT_CONFIG(shortcut)
+        self.pushButton_back.setShortcut(QCoreApplication.translate("MainWindow", u"[", None))
+#endif // QT_CONFIG(shortcut)
         self.pushButton_next.setText(QCoreApplication.translate("MainWindow", u"Next", None))
+#if QT_CONFIG(shortcut)
+        self.pushButton_next.setShortcut(QCoreApplication.translate("MainWindow", u"]", None))
+#endif // QT_CONFIG(shortcut)
         self.pushButton_save.setText(QCoreApplication.translate("MainWindow", u"Save", None))
+#if QT_CONFIG(shortcut)
+        self.pushButton_save.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+S", None))
+#endif // QT_CONFIG(shortcut)
     # retranslateUi
 
