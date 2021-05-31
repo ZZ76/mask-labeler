@@ -1,5 +1,7 @@
 # mask-labeler
 
+<img src="Screenshot.png" width="600">
+
 ### Usage
 python main.py</br>
 select label and image directory
