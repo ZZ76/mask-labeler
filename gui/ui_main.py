@@ -97,7 +97,7 @@ class Ui_MainWindow(object):
 
         self.widget_3 = QWidget(self.widget)
         self.widget_3.setObjectName(u"widget_3")
-        self.widget_3.setMinimumSize(QSize(480, 480))
+        self.widget_3.setMinimumSize(QSize(0, 0))
         self.verticalLayout_4 = QVBoxLayout(self.widget_3)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
@@ -116,7 +116,7 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);")
         self.label_image.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.verticalLayout_4.addWidget(self.label_image)
+        self.verticalLayout_4.addWidget(self.label_image, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.widget_bottom = QWidget(self.widget_3)
         self.widget_bottom.setObjectName(u"widget_bottom")
@@ -213,7 +213,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addWidget(self.widget_bottom)
 
 
-        self.horizontalLayout.addWidget(self.widget_3)
+        self.horizontalLayout.addWidget(self.widget_3, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.widget_right = QWidget(self.widget)
         self.widget_right.setObjectName(u"widget_right")
