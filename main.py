@@ -175,6 +175,8 @@ class MainWindow(QMainWindow):
         print("Saved mat at: {}".format(self.LABEL_PATH))
 
     def load_image_and_mat(self, item):
+        if item is None:
+            return
         image_name = item.text()
         self.CURRENT_IDX = self.ui.listWidget.currentRow()
         # set name
