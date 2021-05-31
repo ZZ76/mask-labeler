@@ -1,7 +1,7 @@
 # mask-labeler
 
 ### Usage
-python main.py img</br>
+python main.py</br>
 select label and image directory
 
 ### Shortcuts
