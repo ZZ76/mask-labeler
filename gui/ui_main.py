@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
         self.widget_left.setObjectName(u"widget_left")
         self.verticalLayout_3 = QVBoxLayout(self.widget_left)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(-1, 0, -1, 0)
+        self.verticalLayout_3.setContentsMargins(10, 0, 10, 0)
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer_2)
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.label_image.setMinimumSize(QSize(480, 480))
         self.label_image.setMaximumSize(QSize(480, 480))
         self.label_image.setStyleSheet(u"background-color: rgb(25, 29, 38);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(238, 238, 236);")
         self.label_image.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
         self.verticalLayout_4.addWidget(self.label_image, 0, Qt.AlignHCenter|Qt.AlignVCenter)
@@ -287,6 +287,8 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
+        self.statusbar.setStyleSheet(u"background-color: rgb(25, 29, 38);\n"
+"color: rgb(211, 215, 207);")
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
