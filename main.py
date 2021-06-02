@@ -172,7 +172,8 @@ class MainWindow(QMainWindow):
 
     def save_mat(self):
         np.save(self.LABEL_PATH, self.MAT)
-        print("Saved mat at: {}".format(self.LABEL_PATH))
+        self.ui.statusbar.showMessage("Saved mask at: {}".format(self.LABEL_PATH), 8000)
+        print("Saved mask at: {}".format(self.LABEL_PATH))
 
     def load_image_and_mat(self, item):
         if item is None:
